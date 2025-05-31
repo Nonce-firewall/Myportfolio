@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Send, Facebook, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Facebook, Github, Linkedin, Twitter, Discord } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 
 const Contact: React.FC = () => {
@@ -102,6 +102,15 @@ const Contact: React.FC = () => {
                 >
                   <Facebook size={18} />
                 </a>
+                <a 
+                  href="https://discord.gg/R9vzqqjD" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  aria-label="Discord Server"
+                >
+                  <Discord size={18} />
+                </a>
               </div>
             </div>
           </div>
@@ -110,8 +119,8 @@ const Contact: React.FC = () => {
             {state.succeeded ? (
               <div className="h-full flex flex-col items-center justify-center text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-500 mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg\" width="32\" height="32\" viewBox="0 0 24 24\" fill="none\" stroke="currentColor\" strokeWidth="2\" strokeLinecap="round\" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
+                  <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Message Sent!</h3>
@@ -196,8 +205,8 @@ const Contact: React.FC = () => {
                   >
                     {state.submitting ? (
                       <>
-                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white\" xmlns="http://www.w3.org/2000/svg\" fill="none\" viewBox="0 0 24 24">
-                          <circle className="opacity-25\" cx="12\" cy="12\" r="10\" stroke="currentColor\" strokeWidth="4"></circle>
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                         Sending...
